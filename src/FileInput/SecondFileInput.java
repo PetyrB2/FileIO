@@ -1,10 +1,9 @@
 package FileInput;
 
-
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
 
 public class SecondFileInput {
 
@@ -21,28 +20,30 @@ public class SecondFileInput {
 		System.out.println("========================\n");
 		System.out.println("");
 		// Begin code
-	
-		
+
 		Scanner infile;
-		
+
 		try {
 			infile = new Scanner(new File("input_with_Text.txt"));
 			String input;
-			
-			while(infile.hasNextLine()) {
+
+			while (infile.hasNextLine()) {
 				input = infile.nextLine();
 				System.out.println(input);
-			}//end while
-			
-			infile.close();	
-			
+			} // end while
+
+			infile.close();
+
 		}
-		
-		catch(FileNotFoundException ex) {
+
+		catch (FileNotFoundException ex) {
 			System.out.println("File not Found !");
 			System.out.println(ex.getMessage());
-		}//end try-catch
-		
-	}//end main
+		} // end try-catch
+
+		catch (InputMismatchException ex) {
+			System.out.println("Error Reading Input. Expected Numerical Values Only!");
+		} // end mismatch catch
+	}// end main
 
 }
