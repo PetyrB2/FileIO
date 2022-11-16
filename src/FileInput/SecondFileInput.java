@@ -1,27 +1,3 @@
-Below is some data to pull from input.txt and a copy of FileInputFun.java
-
-#################
-# Begin Numbers #
-#################
-25
-562
-35
-12
-78
-9
-65
-134
-55
-6
-666
-489
-777
-
-###############################################
-##Below is the java file SecondFileInput.java##
-###############################################
-
-
 package FileInput;
 
 
